@@ -3,7 +3,7 @@ import Star from './Star';
 
 export default function Stars({count}) {
 
-    const stars = [...new Array(count)].map(()=><li key={Math.floor(Math.random() * 100)}><Star/></li>)
+    const stars = new Array(count).fill().map(()=><li key={Math.floor(Math.random() * 100)}><Star/></li>)
     console.log(stars)
   return (
     <div>
